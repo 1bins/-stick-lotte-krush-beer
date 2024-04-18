@@ -1,0 +1,100 @@
+@keyframes beerUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes beerDown {
+  to {
+    transform: translateY(150%);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  height: -webkit-fill-available;
+  height: -moz-available;
+  height: fill-available;
+  overflow: hidden;
+  touch-action: none;
+}
+
+#beer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  /* overflow: hidden; */
+  animation: beerUp 2.6s cubic-bezier(0.25, 0.85, 0.5, 0.95);
+  transform-origin: bottom;
+}
+#beer.active {
+  animation: beerDown 6.5s forwards;
+}
+#beer.active.paused {
+  animation-play-state: paused;
+}
+#beer .beer-wrap {
+  position: relative;
+  width: 250vw;
+  height: 200vh;
+  flex-shrink: 0;
+}
+#beer .beer-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250vw;
+  height: 200%;
+  background: rgb(255, 235, 69);
+  background-image: radial-gradient(circle, rgb(255, 203, 34) 10%, rgb(218, 160, 3) 70%, rgb(192, 126, 4) 100%);
+  transform-origin: bottom;
+  overflow: visible !important;
+}
+#beer .beer-body #bubbles {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  resize: both;
+}
+#beer .beer-foam {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 250vw;
+  height: 200%;
+  background-image: url("../image/foam.png");
+  background-size: auto 200px;
+  background-repeat: repeat-x;
+  z-index: 10;
+}
+
+#start_demo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 180px;
+  height: 60px;
+  font-size: 1.5rem;
+  background: #eee;
+  text-align: center;
+  z-index: 20;
+  border-radius: 12px;
+}
+
+@media screen and (max-width: 768px) {
+  #beer .beer-wrap,
+  #beer .beer-body,
+  #beer .beer-foam {
+    width: 500vw;
+  }
+}
