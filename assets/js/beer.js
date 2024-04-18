@@ -34,9 +34,9 @@ function updateFieldIfNotNull(alpha, beta, gamma){
         else if (gamma > -60 && gamma < 60) {
             $('#beer').addClass('paused');
             if (leftSide) {
-                tl.to('.beer-wrap', {rotation: `${absGamma * 0.6}`});
+                tl.to('.beer-wrap', {rotation: `${absGamma * 0.5}`});
             } else if (rightSide) {
-                tl.to('.beer-wrap', {rotation: `${absGamma * -0.6}`});
+                tl.to('.beer-wrap', {rotation: `${absGamma * -0.5}`});
             }
         }
         // 그 외의 경우
@@ -44,9 +44,9 @@ function updateFieldIfNotNull(alpha, beta, gamma){
             $('#beer').removeClass('paused');
             $('#beer').addClass('active');
             if (leftSide) {
-                tl.to('.beer-wrap', {rotation: 36});
+                tl.to('.beer-wrap', {rotation: 30});
             } else if (rightSide) {
-                tl.to('.beer-wrap', {rotation: -36});
+                tl.to('.beer-wrap', {rotation: -30});
             }
         }
 

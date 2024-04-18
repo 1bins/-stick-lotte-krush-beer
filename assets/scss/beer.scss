@@ -1,7 +1,7 @@
 @charset "utf-8";
 
 $variableWidth: (
-    mobile: 500vw,
+    mobile: 400vw,
     pc: 250vw,
 );
 
@@ -68,7 +68,7 @@ body {
         top: 0; left: 0;
         width: map-get($variableWidth, pc); height: 200%;
         background-image: url('../image/foam.png');
-        background-size: auto 200px;
+        background-size: 100vw 200px;
         background-repeat: repeat-x;
         z-index: 10;
     }

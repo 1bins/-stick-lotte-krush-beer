@@ -73,7 +73,7 @@ body {
   width: 250vw;
   height: 200%;
   background-image: url("../image/foam.png");
-  background-size: auto 200px;
+  background-size: 100vw 200px;
   background-repeat: repeat-x;
   z-index: 10;
 }
@@ -105,6 +105,6 @@ body {
   #beer .beer-wrap,
   #beer .beer-body,
   #beer .beer-foam {
-    width: 500vw;
+    width: 400vw;
   }
 }
