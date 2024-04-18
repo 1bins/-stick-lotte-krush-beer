@@ -25,7 +25,7 @@ function updateFieldIfNotNull(alpha, beta, gamma){
         }
         else {
             $('#beer').removeClass('paused')
-            $('#beer').addClass('active')
+            // $('#beer').addClass('active')
 
             if(absGamma > 60){
                 // $('.beer-wrap').css({'transform': `rotate(30deg)`})
@@ -43,6 +43,7 @@ function updateFieldIfNotNull(alpha, beta, gamma){
 let demo_button = document.getElementById("start_demo");
 demo_button.onclick = function(e) {
     e.preventDefault();
+    $('.btn-wrap').fadeOut(200);
 
     // Request permission for iOS 13+ devices
     if (
