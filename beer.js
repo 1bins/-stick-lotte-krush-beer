@@ -15,9 +15,13 @@ function updateFieldIfNotNull(alpha, beta, gamma){
     if (gamma != null){
         let absGamma = Math.abs(gamma);
 
-        if(gamma > -45 && gamma < 45){
+        if(gamma == 0){
             $('#beer').addClass('paused')
-            gsap.to('.beer-wrap', {rotation: 0})        
+            gsap.to('.beer-wrap', {rotation: 0})
+
+        }else if(gamma > -45 && gamma < 45){
+            $('#beer').addClass('paused')
+            gsap.to('.beer-wrap', {rotation: `${gamma * 0.4}`})
         }
         else {
             $('#beer').removeClass('paused')
@@ -25,7 +29,7 @@ function updateFieldIfNotNull(alpha, beta, gamma){
 
             if(absGamma > 60){
                 // $('.beer-wrap').css({'transform': `rotate(30deg)`})
-                gsap.to('.beer-wrap', {rotation: 24})
+                gsap.to('.beer-wrap', {rotation: 24, duration: 1.5})
             }else {
                 gsap.to('.beer-wrap', {rotation: `${gamma * 0.4}`})
             }
