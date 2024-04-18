@@ -21,7 +21,7 @@ function updateFieldIfNotNull(alpha, beta, gamma){
             $('#beer').removeClass('paused')
             $('#beer').addClass('active')
 
-            $('.beer-wrap').css({'transform': `rotate(${absGamma * 0.5}deg)`})
+            $('.beer-wrap').css({'transform': `rotate(${absGamma * 0.2}deg)`})
         }
         
     }
