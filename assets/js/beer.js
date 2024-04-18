@@ -21,7 +21,7 @@ function updateFieldIfNotNull(alpha, beta, gamma){
 
         }else if(gamma > -45 && gamma < 45){
             $('#beer').addClass('paused')
-            gsap.to('.beer-wrap', {rotation: `${gamma * 0.4}`})
+            gsap.to('.beer-wrap', {rotation: `${gamma * -0.4}`})
         }
         else {
             $('#beer').removeClass('paused')
@@ -31,7 +31,7 @@ function updateFieldIfNotNull(alpha, beta, gamma){
                 // $('.beer-wrap').css({'transform': `rotate(30deg)`})
                 gsap.to('.beer-wrap', {rotation: 24, duration: 1.5})
             }else {
-                gsap.to('.beer-wrap', {rotation: `${gamma * 0.4}`})
+                gsap.to('.beer-wrap', {rotation: `${gamma * -0.4}`})
             }
         }
         
