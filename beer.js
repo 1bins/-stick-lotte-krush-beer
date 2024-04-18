@@ -17,11 +17,18 @@ function updateFieldIfNotNull(alpha, beta, gamma){
 
         if(gamma > -45 && gamma < 45){
             $('#beer').addClass('paused')
-        }else {
+            gsap.to('.beer-wrap', {rotation: 0})        
+        }
+        else {
             $('#beer').removeClass('paused')
             $('#beer').addClass('active')
 
-            $('.beer-wrap').css({'transform': `rotate(${absGamma * 0.2}deg)`})
+            if(absGamma > 60){
+                // $('.beer-wrap').css({'transform': `rotate(30deg)`})
+                gsap.to('.beer-wrap', {rotation: 24})
+            }else {
+                gsap.to('.beer-wrap', {rotation: `${gamma * 0.4}`})
+            }
         }
         
     }
