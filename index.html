@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./beer.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        history.scrollRestoration = "manual";
+    </script>
+    <title>맥주마시기</title>
+</head>
+<body>
+    <div id="beer">
+        <div class="beer-wrap">
+            <div class="beer-foam"></div>
+            <div class="beer-body">
+                <canvas id="bubbles"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <button id="start_demo">시작하기</button>
+
+
+    <script src="./bubble.js"></script>
+    <script src="./beer.js"></script>
+</body>
+</html>
