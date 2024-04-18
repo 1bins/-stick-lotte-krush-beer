@@ -63,7 +63,7 @@ canvas{
     position: absolute;
     top: 0; left: 0;
     width: 200vw; height: 200%;
-    background-image: url('https://1bins.github.io/test/foam.png');
+    background-image: url('./foam.png');
     background-size: auto 200px;
     background-repeat: repeat-x;
     z-index: 10;
